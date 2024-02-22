@@ -16,18 +16,20 @@ To mitigate problems with bycatch, data collection programs have been conducted 
 
 ## Approach
 
-put here
+We used a gradient-boosting ensemble machine learning algorithm to classify the categorical outcome features for bycatch weight and taxonomic richness. Gradient boosting was used because it captures complex non-linear dependencies at a low computational cost, especially for data with a low signal-to-noise ratio. Gradient boosting was also used for transparency and ease of the interpretability of results, offered to some extent by tree-based models
 
 ---
 
 ## Findings
 
-put here 
+Different spatial, temporal, biological, and fishery features were identified as important in classifying the magnitude of taxa-specific bycatch in the four fisheries examined. Across all models, the oceanographic feature sea surface temperature and the temporal feature year were the most important factors in classifying the median weight of bycatch. Among the spatial features, longitude was ranked among the top four important features in all models, while latitude was present but ranked lower in importance. The spatial features "inshore" and "Area Southern Massachusetts" were only significant in predicting the median weight of bycatch for the Longfin Squid fishery model. The biological features important in classifying bycatch magnitude in the Summer Flounder fishery included the presence or absence of cartilaginous fishes such as Clearnose Skate, Barndoor Skate, and Winter Skate well as Spiny Dogfish. 
+
+Shapley analysis was informative for some features we identified as important but less informative for others. Although we observed that the feature sea surface temperature consistently ranked as the most important feature in all classification models, our SHAP analysis did not indicate a clear pattern in its direction of influence on the model outcome. High and low sea surface temperature values had positive and negative impacts on the predicted outcome. Conversely, the biological features representing specific bycatch species negatively influenced the model outcome, implying a tendency for the model to predict below median bycatch weight if these taxa were also present on the trip. 
 
 ---
 
 ## Conlcusions
 
-put here
+In this study, we examined the bycatch composition in four commercial fisheries in the northeastern U.S. We used machine learning classification to gain insights into the spatial, temporal, biological, and fishery characteristics that describe contrasts between fishery-specific bycatch magnitude and the richness of bycatch. Our primary findings indicate that six species each accounted for at least 5% of the records, including each targeted species. The observed bycatch magnitude for the four fisheries ranged from 312 to 1,539 mt over the 17-year data duration. We found that the binary classification accuracies of the models were only moderate, never exceeding 80% classification accuracy. All classification models consistently showed that the oceanographic feature sea surface temperature and the temporal feature year are important in determining model performance. Feature importance, however, does not provide an indication of the direction of the response. The Shapley analysis indicated little consistent pattern in the value of the response. The findings of this study show the promise and challenges of using ML approaches for describing contrasts in bycatch abundance and taxonomic richness for mobile gear fisheries in the mid-Atlantic. The benefits of using an ML approach in this case is that we do not need to rely on a priori models to describe the phenomena to be studied. 
 
 ---
